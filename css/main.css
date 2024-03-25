@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: rgb(20, 29, 47);
+  transition: all 0.3s ease-in;
+}
+.active .container {
+  background-color: rgb(246, 248, 255);
+}
+
+nav {
+  width: 750px;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+nav .nav_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.nav_top h1 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in;
+}
+.active .nav_top h1 {
+  color: rgba(34, 39, 49, 1);
+}
+
+.nav_top .light {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease-in;
+}
+.active .nav_top .light {
+  display: none;
+}
+.nav_top .dark {
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 15px;
+  display: none;
+  transition: all 0.3s ease-in;
+}
+
+.active .nav_top .dark {
+  display: flex;
+  color: rgba(105, 124, 154, 1);
+}
+
+.light h3 {
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.nav_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(30, 42, 71, 1);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.nav_bottom .search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search input {
+  width: 90%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  padding: 10px 20px;
+  border: none;
+  background-color: initial;
+  transition: all 0.3s ease-in;
+}
+
+.active .search input {
+  color: rgba(75, 106, 155, 1);
+}
+
+.nav_bottom button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(0, 121, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  cursor: pointer;
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.active .nav_bottom {
+  background: rgba(254, 254, 254, 1);
+  color: rgba(75, 106, 155, 1);
+}
+
+main {
+  width: 750px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+main .cards {
+  width: 100%;
+  background: rgba(30, 42, 71, 1);
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  transition: all 0.3s ease-in;
+}
+
+.active .cards {
+  background: rgba(254, 254, 254, 1);
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+}
+
+.cards .card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.data {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card img {
+  width: 20%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.names {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in;
+}
+.active .name h2 {
+  color: rgba(43, 52, 66, 1);
+}
+.name a {
+  color: rgba(0, 121, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  text-align: left;
+}
+.time {
+  padding: 10px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  transition: all 0.3s ease-in;
+}
+.active .time {
+  color: rgba(105, 124, 154, 1);
+}
+.profile {
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  transition: all 0.3s ease-in;
+}
+.active .profile {
+  color: rgba(75, 106, 155, 1);
+}
+
+.boxs {
+  width: 480px;
+}
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(30, 42, 71, 1);
+  border-radius: 10px;
+  background: rgba(20, 29, 47, 1);
+  transition: all 0.3s ease-in;
+}
+.active .box {
+  background: rgba(246, 248, 255, 1);
+}
+.box h5 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in;
+}
+
+.active .box h5 {
+  color: rgba(75, 106, 155, 1);
+}
+
+.box h4 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  transition: all 0.3s ease-in;
+}
+
+.active .box h4 {
+  color: rgba(43, 52, 66, 1);
+}
+.boxs .boxFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.boxs .boxFooter a {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+.active .boxs .boxFooter a {
+  color: rgba(75, 106, 155, 1);
+}
+
+.loader {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background-color: black;
+}
+
+.start.loader {
+  display: flex;
+}
+
+@media (max-width: 790px) {
+  nav {
+    width: 570px;
+  }
+  main {
+    width: 570px;
+  }
+
+  .boxs {
+    width: 100%;
+  }
+
+  .card img {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .names {
+    display: block;
+  }
+  .time {
+    padding: 10px 0px;
+  }
+  .profile {
+    width: 100%;
+    background-color: red;
+  }
+}
